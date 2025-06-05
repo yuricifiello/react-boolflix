@@ -1,13 +1,14 @@
-import Header from "./components/layouts/Header";
-import Main from "./components/layouts/Main";
-import Footer from "./components/layouts/Footer";
+import Header from "./components/Header";
+import Main from "./components/Main";
+import { MediaProvider } from "./context/MediaContext";
 
-export default function App() {
+function App() {
   return (
-    <>
+    <MediaProvider>
       <Header />
       <Main />
-      <Footer />
-    </>
+    </MediaProvider>
   );
 }
+
+export default App;
