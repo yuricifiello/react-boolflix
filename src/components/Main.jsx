@@ -3,18 +3,17 @@ import { MediaContext } from "../context/MediaContext";
 import MediaCard from "./MediaCard";
 
 export default function Main() {
-  const { mediaList, isLoading } = useContext(MediaContext);
+  const { mediaList } = useContext(MediaContext);
 
   return (
     <main>
-      {isLoading && <p>Caricamento in corso...</p>}
-      {!isLoading && mediaList.length > 0 && (
-        <div>
-          {mediaList.map((item) => (
-            <MediaCard key={item.id + item.type} item={item} />
-          ))}
-        </div>
-      )}
+      <ul className="media-list">
+        {mediaList.map((item) => (
+          <li key={item.id + item.type}>
+            <MediaCard item={item} />
+          </li>
+        ))}
+      </ul>
     </main>
   );
 }
