@@ -22,6 +22,8 @@ export function MediaProvider({ children }) {
           originalTitle: item.original_title,
           language: item.original_language,
           vote: item.vote_average,
+          poster: item.poster_path,
+          overview: item.overview,
           type: "movie",
         }));
 
@@ -31,6 +33,8 @@ export function MediaProvider({ children }) {
           originalTitle: item.original_name,
           language: item.original_language,
           vote: item.vote_average,
+          poster: item.poster_path,
+          overview: item.overview,
           type: "tv",
         }));
 
