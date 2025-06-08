@@ -12,6 +12,7 @@ export default function Header() {
 
   return (
     <header>
+      <h1>Boolflix 🎬</h1>
       <input
         type="text"
         placeholder="Cerca film o serie..."
